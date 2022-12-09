@@ -3,6 +3,7 @@ package com.example.conciertodq;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
@@ -24,6 +25,19 @@ public class MainActivity extends AppCompatActivity {
         jcbvip=findViewById(R.id.cbvip);
 
 
+    }
+
+    public void Cancelar(View view){
+        Limpiar_datos();
+    }
+
+    private void Limpiar_datos(){
+        jetcedula.setText("");
+        jetnombre.setText("");
+        jcbactivo.setChecked(false);
+        jcbgeneral.setChecked(true);
+        jcbprefencial.setChecked(true);
+        jcbvip.setChecked(true);
     }
 
 
